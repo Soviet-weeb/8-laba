@@ -1,0 +1,25 @@
+#виведіть на екран елементи лінійного масиву (заданий користувачем) у
+#зворотному порядку;
+import numpy as np
+while True:
+    while True:
+        try:
+            n = int(input('Введіть к-ть чисел')) #Задання розміру 
+            a = np.zeros((n), dtype=int)
+            b= np.zeros((n), dtype=int)
+            break
+        except ValueError:
+            print('Тільки числа')
+
+    for i in range(n): #введення чисел у масив
+        a[i] = int(input('Введіть числа: '))
+    print(a)
+
+    for i in range(n): #заповнення пустого маиву навпаки значеннями з першого
+        b[i]=a[n - 1 - i]
+    print(f'Новий массив:{b}')
+    result = input('Перезапустити?Якщо да то натисни щось')
+    if result == '1':
+        continue
+    else:
+        break
