@@ -1,0 +1,24 @@
+#Підрядок
+while True:
+    s=input('Введи речення:')
+    s1=input('Шо ти хош найти:')
+    i=-1
+    j=0
+    count=0
+    while (j < len(s1)) and i < (len(s) - len(s1)):
+        j = 0
+        i += 1
+        count += 2
+        while j < len(s1) and s1[j] == s[i + j]:
+            j += 1
+            count += 2
+    if j==len(s1):
+        print(f'Шукане на {i} позішоні')
+    else:
+        print('Ніц нема')
+    print(f' {count + 1} ')
+    result = input('Щоб перезапустити , натисни щось')
+    if result == '1':
+        continue
+    else:
+        break
